@@ -1,5 +1,10 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Header from './components/Layout/Header'
 
 export default function App() {
-  return <div></div>
+  return (
+    <Fragment>
+      <Header />
+    </Fragment>
+  )
 }
