@@ -1,12 +1,13 @@
 import React, { Fragment } from 'react'
 import backImg from '../../assets/backimg.jpg'
 import classes from './Header.module.css'
+import HeaderCartButton from './HeaderCartButton'
 const Header = (props) => {
   return (
     <Fragment>
       <header className={classes.header}>
-        <h1>ReactMeals</h1>
-        <button>Cart</button>
+        <h1>리액트메뉴판</h1>
+        <HeaderCartButton />
       </header>
       <div className={classes['main-image']}>
         <img
