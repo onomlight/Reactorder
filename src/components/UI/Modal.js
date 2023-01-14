@@ -1,8 +1,10 @@
 import { Fragment } from 'react'
-import { ReactDOM } from 'react'
+import ReactDOM from 'react-dom'
+
 import classes from './Modal.module.css'
+
 const Backdrop = (props) => {
-  return <div className={classes.backdrop} />
+  return <div className={classes.backdrop} onClick={props.onClose} />
 }
 
 const ModalOverlay = (props) => {
@@ -14,15 +16,20 @@ const ModalOverlay = (props) => {
 }
 
 const portalElement = document.getElementById('overlays')
+
 const Modal = (props) => {
   return (
     <Fragment>
-      {ReactDOM.createPortal(<Backdrop />, portalElement)}
-
-      {ReactDOM.createPortal(<ModalOverlay>{props.children}</ModalOverlay>)}
+      {ReactDOM.createPortal(
+        <Backdrop onClose={props.onClose} />,
+        portalElement,
+      )}
+      {ReactDOM.createPortal(
+        <ModalOverlay>{props.children}</ModalOverlay>,
+        portalElement,
+      )}
     </Fragment>
   )
 }
+
 export default Modal
-//모달이 렌더링할수있도록 해야함으로 pubilc -> index 에서 div추가
-// 어이다가 불러올건지 추가함
