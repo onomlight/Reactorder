@@ -5,15 +5,9 @@ import classes from './MealsSummary.module.css'
 const MealsSummary = () => {
   return (
     <section className={classes.summary}>
-      <h2>Delicious Food, Delivered To You</h2>
-      <p>
-        Choose your favorite meal from our broad selection of available meals
-        and enjoy a delicious lunch or dinner at home.
-      </p>
-      <p>
-        All our meals are cooked with high-quality ingredients, just-in-time and
-        of course by experienced chefs!
-      </p>
+      <h2>맛잇는 음식들</h2>
+      <p>가장 좋아하는 음식중 하나를 골라주세요!</p>
+      <p>수량은 최대 5개까지만 가능합니다 :)</p>
     </section>
   )
 }

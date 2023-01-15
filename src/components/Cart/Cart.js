@@ -8,7 +8,9 @@ import CartContext from '../../store/cart-context'
 const Cart = (props) => {
   const cartCtx = useContext(CartContext)
 
-  const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`
+  // 총액
+  const totalAmount = `${cartCtx.totalAmount.toFixed(2)}천원`
+
   const hasItems = cartCtx.items.length > 0
 
   const cartItemRemoveHandler = (id) => {
@@ -38,14 +40,15 @@ const Cart = (props) => {
     <Modal onClose={props.onClose}>
       {cartItems}
       <div className={classes.total}>
-        <span>Total Amount</span>
+        <span>총 금액 </span>
         <span>{totalAmount}</span>
       </div>
       <div className={classes.actions}>
         <button className={classes['button--alt']} onClick={props.onClose}>
-          Close
+          닫기
         </button>
-        {hasItems && <button className={classes.button}>Order</button>}
+        {hasItems && <button className={classes.button}>주문하기</button>}
+        {/* ture일경우 랜더링  */}
       </div>
     </Modal>
   )

@@ -5,26 +5,26 @@ import classes from './AvailableMeals.module.css'
 const DUMMY_MEALS = [
   {
     id: 'm1',
-    name: 'Sushi',
-    description: 'Finest fish and veggies',
+    name: '모듬 초밥',
+    description: '연어 고등어 계란 새우 ',
     price: 22.99,
   },
   {
     id: 'm2',
-    name: 'Schnitzel',
-    description: 'A german specialty!',
+    name: '종합 타코야끼',
+    description: '매운맛 파타코 치즈 참치',
     price: 16.5,
   },
   {
     id: 'm3',
-    name: 'Barbecue Burger',
-    description: 'American, raw, meaty',
+    name: '돈카츠',
+    description: '등심 안심',
     price: 12.99,
   },
   {
     id: 'm4',
-    name: 'Green Bowl',
-    description: 'Healthy...and green...',
+    name: '소불고기 덮밥',
+    description: '맛잇음',
     price: 18.99,
   },
 ]
